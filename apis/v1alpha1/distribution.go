@@ -26,11 +26,11 @@ import (
 // and the details about how to track and manage content delivery.
 type DistributionSpec struct {
 
-	// The distribution's configuration information.
-	// +kubebuilder:validation:Required
-	DistributionConfig *DistributionConfig `json:"distributionConfig"`
-	// A complex type that contains Tag elements.
-	Tags []*Tag `json:"tags,omitempty"`
+// The distribution's configuration information.
+// +kubebuilder:validation:Required
+DistributionConfig *DistributionConfig `json:"distributionConfig"`
+// A complex type that contains Tag elements.
+Tags []*Tag `json:"tags,omitempty"`
 }
 
 // DistributionStatus defines the observed state of Distribution
@@ -47,27 +47,27 @@ type DistributionStatus struct {
 	// +kubebuilder:validation:Optional
 	Conditions []*ackv1alpha1.Condition `json:"conditions"`
 	// This field contains a list of key groups and the public keys in each key
-	// group that CloudFront can use to verify the signatures of signed URLs or
-	// signed cookies.
+// group that CloudFront can use to verify the signatures of signed URLs or
+// signed cookies.
 	// +kubebuilder:validation:Optional
 	ActiveTrustedKeyGroups *ActiveTrustedKeyGroups `json:"activeTrustedKeyGroups,omitempty"`
-	//
-	// We recommend using TrustedKeyGroups instead of TrustedSigners.
-	//
-	// This field contains a list of Amazon Web Services account IDs and the active
-	// CloudFront key pairs in each account that CloudFront can use to verify the
-	// signatures of signed URLs or signed cookies.
+	// 
+// We recommend using TrustedKeyGroups instead of TrustedSigners.
+// 
+// This field contains a list of Amazon Web Services account IDs and the active
+// CloudFront key pairs in each account that CloudFront can use to verify the
+// signatures of signed URLs or signed cookies.
 	// +kubebuilder:validation:Optional
 	ActiveTrustedSigners *ActiveTrustedSigners `json:"activeTrustedSigners,omitempty"`
 	// Amazon Web Services services in China customers must file for an Internet
-	// Content Provider (ICP) recordal if they want to serve content publicly on
-	// an alternate domain name, also known as a CNAME, that they've added to CloudFront.
-	// AliasICPRecordal provides the ICP recordal status for CNAMEs associated with
-	// distributions.
-	//
-	// For more information about ICP recordals, see Signup, Accounts, and Credentials
-	// (https://docs.amazonaws.cn/en_us/aws/latest/userguide/accounts-and-credentials.html)
-	// in Getting Started with Amazon Web Services services in China.
+// Content Provider (ICP) recordal if they want to serve content publicly on
+// an alternate domain name, also known as a CNAME, that they've added to CloudFront.
+// AliasICPRecordal provides the ICP recordal status for CNAMEs associated with
+// distributions.
+// 
+// For more information about ICP recordals, see Signup, Accounts, and Credentials
+// (https://docs.amazonaws.cn/en_us/aws/latest/userguide/accounts-and-credentials.html)
+// in Getting Started with Amazon Web Services services in China.
 	// +kubebuilder:validation:Optional
 	AliasICPRecordals []*AliasICPRecordal `json:"aliasICPRecordals,omitempty"`
 	// +kubebuilder:validation:Optional
@@ -88,7 +88,7 @@ type DistributionStatus struct {
 	// +kubebuilder:validation:Optional
 	LastModifiedTime *metav1.Time `json:"lastModifiedTime,omitempty"`
 	// The distribution's status. When the status is Deployed, the distribution's
-	// information is fully propagated to all CloudFront edge locations.
+// information is fully propagated to all CloudFront edge locations.
 	// +kubebuilder:validation:Optional
 	Status *string `json:"status,omitempty"`
 }
@@ -99,8 +99,8 @@ type DistributionStatus struct {
 type Distribution struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              DistributionSpec   `json:"spec,omitempty"`
-	Status            DistributionStatus `json:"status,omitempty"`
+	Spec   DistributionSpec   `json:"spec,omitempty"`
+	Status DistributionStatus `json:"status,omitempty"`
 }
 
 // DistributionList contains a list of Distribution
@@ -108,7 +108,7 @@ type Distribution struct {
 type DistributionList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Distribution `json:"items"`
+	Items []Distribution `json:"items"`
 }
 
 func init() {

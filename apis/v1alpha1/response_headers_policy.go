@@ -23,26 +23,26 @@ import (
 // ResponseHeadersPolicySpec defines the desired state of ResponseHeadersPolicy.
 //
 // A response headers policy.
-//
+// 
 // A response headers policy contains information about a set of HTTP response
 // headers.
-//
+// 
 // After you create a response headers policy, you can use its ID to attach
 // it to one or more cache behaviors in a CloudFront distribution. When it's
 // attached to a cache behavior, the response headers policy affects the HTTP
 // headers that CloudFront includes in HTTP responses to requests that match
 // the cache behavior. CloudFront adds or removes response headers according
 // to the configuration of the response headers policy.
-//
+// 
 // For more information, see Adding or removing HTTP headers in CloudFront responses
 // (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html)
 // in the Amazon CloudFront Developer Guide.
 type ResponseHeadersPolicySpec struct {
 
-	// Contains metadata about the response headers policy, and a set of configurations
-	// that specify the HTTP headers.
-	// +kubebuilder:validation:Required
-	ResponseHeadersPolicyConfig *ResponseHeadersPolicyConfig `json:"responseHeadersPolicyConfig"`
+// Contains metadata about the response headers policy, and a set of configurations
+// that specify the HTTP headers.
+// +kubebuilder:validation:Required
+ResponseHeadersPolicyConfig *ResponseHeadersPolicyConfig `json:"responseHeadersPolicyConfig"`
 }
 
 // ResponseHeadersPolicyStatus defines the observed state of ResponseHeadersPolicy
@@ -74,8 +74,8 @@ type ResponseHeadersPolicyStatus struct {
 type ResponseHeadersPolicy struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              ResponseHeadersPolicySpec   `json:"spec,omitempty"`
-	Status            ResponseHeadersPolicyStatus `json:"status,omitempty"`
+	Spec   ResponseHeadersPolicySpec   `json:"spec,omitempty"`
+	Status ResponseHeadersPolicyStatus `json:"status,omitempty"`
 }
 
 // ResponseHeadersPolicyList contains a list of ResponseHeadersPolicy
@@ -83,7 +83,7 @@ type ResponseHeadersPolicy struct {
 type ResponseHeadersPolicyList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []ResponseHeadersPolicy `json:"items"`
+	Items []ResponseHeadersPolicy `json:"items"`
 }
 
 func init() {

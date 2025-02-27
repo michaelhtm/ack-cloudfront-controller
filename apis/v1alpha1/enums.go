@@ -18,41 +18,41 @@ package v1alpha1
 type CachePolicyCookieBehavior string
 
 const (
-	CachePolicyCookieBehavior_all       CachePolicyCookieBehavior = "all"
+	CachePolicyCookieBehavior_all CachePolicyCookieBehavior = "all"
 	CachePolicyCookieBehavior_allExcept CachePolicyCookieBehavior = "allExcept"
-	CachePolicyCookieBehavior_none      CachePolicyCookieBehavior = "none"
+	CachePolicyCookieBehavior_none CachePolicyCookieBehavior = "none"
 	CachePolicyCookieBehavior_whitelist CachePolicyCookieBehavior = "whitelist"
 )
 
 type CachePolicyHeaderBehavior string
 
 const (
-	CachePolicyHeaderBehavior_none      CachePolicyHeaderBehavior = "none"
+	CachePolicyHeaderBehavior_none CachePolicyHeaderBehavior = "none"
 	CachePolicyHeaderBehavior_whitelist CachePolicyHeaderBehavior = "whitelist"
 )
 
 type CachePolicyQueryStringBehavior string
 
 const (
-	CachePolicyQueryStringBehavior_all       CachePolicyQueryStringBehavior = "all"
+	CachePolicyQueryStringBehavior_all CachePolicyQueryStringBehavior = "all"
 	CachePolicyQueryStringBehavior_allExcept CachePolicyQueryStringBehavior = "allExcept"
-	CachePolicyQueryStringBehavior_none      CachePolicyQueryStringBehavior = "none"
+	CachePolicyQueryStringBehavior_none CachePolicyQueryStringBehavior = "none"
 	CachePolicyQueryStringBehavior_whitelist CachePolicyQueryStringBehavior = "whitelist"
 )
 
 type CachePolicyType string
 
 const (
-	CachePolicyType_custom  CachePolicyType = "custom"
+	CachePolicyType_custom CachePolicyType = "custom"
 	CachePolicyType_managed CachePolicyType = "managed"
 )
 
 type CertificateSource string
 
 const (
-	CertificateSource_acm        CertificateSource = "acm"
+	CertificateSource_acm CertificateSource = "acm"
 	CertificateSource_cloudfront CertificateSource = "cloudfront"
-	CertificateSource_iam        CertificateSource = "iam"
+	CertificateSource_iam CertificateSource = "iam"
 )
 
 type ContinuousDeploymentPolicyType string
@@ -65,9 +65,9 @@ const (
 type EventType string
 
 const (
-	EventType_origin_request  EventType = "origin-request"
+	EventType_origin_request EventType = "origin-request"
 	EventType_origin_response EventType = "origin-response"
-	EventType_viewer_request  EventType = "viewer-request"
+	EventType_viewer_request EventType = "viewer-request"
 	EventType_viewer_response EventType = "viewer-response"
 )
 
@@ -80,7 +80,7 @@ const (
 type FrameOptionsList string
 
 const (
-	FrameOptionsList_DENY       FrameOptionsList = "DENY"
+	FrameOptionsList_DENY FrameOptionsList = "DENY"
 	FrameOptionsList_SAMEORIGIN FrameOptionsList = "SAMEORIGIN"
 )
 
@@ -95,31 +95,31 @@ type FunctionStage string
 
 const (
 	FunctionStage_DEVELOPMENT FunctionStage = "DEVELOPMENT"
-	FunctionStage_LIVE        FunctionStage = "LIVE"
+	FunctionStage_LIVE FunctionStage = "LIVE"
 )
 
 type GeoRestrictionType string
 
 const (
 	GeoRestrictionType_blacklist GeoRestrictionType = "blacklist"
-	GeoRestrictionType_none      GeoRestrictionType = "none"
+	GeoRestrictionType_none GeoRestrictionType = "none"
 	GeoRestrictionType_whitelist GeoRestrictionType = "whitelist"
 )
 
 type HTTPVersion string
 
 const (
-	HTTPVersion_http1_1   HTTPVersion = "http1.1"
-	HTTPVersion_http2     HTTPVersion = "http2"
+	HTTPVersion_http1_1 HTTPVersion = "http1.1"
+	HTTPVersion_http2 HTTPVersion = "http2"
 	HTTPVersion_http2and3 HTTPVersion = "http2and3"
-	HTTPVersion_http3     HTTPVersion = "http3"
+	HTTPVersion_http3 HTTPVersion = "http3"
 )
 
 type ICPRecordalStatus string
 
 const (
-	ICPRecordalStatus_APPROVED  ICPRecordalStatus = "APPROVED"
-	ICPRecordalStatus_PENDING   ICPRecordalStatus = "PENDING"
+	ICPRecordalStatus_APPROVED ICPRecordalStatus = "APPROVED"
+	ICPRecordalStatus_PENDING ICPRecordalStatus = "PENDING"
 	ICPRecordalStatus_SUSPENDED ICPRecordalStatus = "SUSPENDED"
 )
 
@@ -132,49 +132,49 @@ const (
 type ItemSelection string
 
 const (
-	ItemSelection_all       ItemSelection = "all"
-	ItemSelection_none      ItemSelection = "none"
+	ItemSelection_all ItemSelection = "all"
+	ItemSelection_none ItemSelection = "none"
 	ItemSelection_whitelist ItemSelection = "whitelist"
 )
 
 type Method string
 
 const (
-	Method_DELETE  Method = "DELETE"
-	Method_GET     Method = "GET"
-	Method_HEAD    Method = "HEAD"
+	Method_DELETE Method = "DELETE"
+	Method_GET Method = "GET"
+	Method_HEAD Method = "HEAD"
 	Method_OPTIONS Method = "OPTIONS"
-	Method_PATCH   Method = "PATCH"
-	Method_POST    Method = "POST"
-	Method_PUT     Method = "PUT"
+	Method_PATCH Method = "PATCH"
+	Method_POST Method = "POST"
+	Method_PUT Method = "PUT"
 )
 
 type MinimumProtocolVersion string
 
 const (
-	MinimumProtocolVersion_SSLv3        MinimumProtocolVersion = "SSLv3"
-	MinimumProtocolVersion_TLSv1        MinimumProtocolVersion = "TLSv1"
+	MinimumProtocolVersion_SSLv3 MinimumProtocolVersion = "SSLv3"
+	MinimumProtocolVersion_TLSv1 MinimumProtocolVersion = "TLSv1"
 	MinimumProtocolVersion_TLSv1_1_2016 MinimumProtocolVersion = "TLSv1.1_2016"
 	MinimumProtocolVersion_TLSv1_2_2018 MinimumProtocolVersion = "TLSv1.2_2018"
 	MinimumProtocolVersion_TLSv1_2_2019 MinimumProtocolVersion = "TLSv1.2_2019"
 	MinimumProtocolVersion_TLSv1_2_2021 MinimumProtocolVersion = "TLSv1.2_2021"
-	MinimumProtocolVersion_TLSv1_2016   MinimumProtocolVersion = "TLSv1_2016"
+	MinimumProtocolVersion_TLSv1_2016 MinimumProtocolVersion = "TLSv1_2016"
 )
 
 type OriginAccessControlOriginTypes string
 
 const (
-	OriginAccessControlOriginTypes_lambda         OriginAccessControlOriginTypes = "lambda"
+	OriginAccessControlOriginTypes_lambda OriginAccessControlOriginTypes = "lambda"
 	OriginAccessControlOriginTypes_mediapackagev2 OriginAccessControlOriginTypes = "mediapackagev2"
-	OriginAccessControlOriginTypes_mediastore     OriginAccessControlOriginTypes = "mediastore"
-	OriginAccessControlOriginTypes_s3             OriginAccessControlOriginTypes = "s3"
+	OriginAccessControlOriginTypes_mediastore OriginAccessControlOriginTypes = "mediastore"
+	OriginAccessControlOriginTypes_s3 OriginAccessControlOriginTypes = "s3"
 )
 
 type OriginAccessControlSigningBehaviors string
 
 const (
-	OriginAccessControlSigningBehaviors_always      OriginAccessControlSigningBehaviors = "always"
-	OriginAccessControlSigningBehaviors_never       OriginAccessControlSigningBehaviors = "never"
+	OriginAccessControlSigningBehaviors_always OriginAccessControlSigningBehaviors = "always"
+	OriginAccessControlSigningBehaviors_never OriginAccessControlSigningBehaviors = "never"
 	OriginAccessControlSigningBehaviors_no_override OriginAccessControlSigningBehaviors = "no-override"
 )
 
@@ -187,50 +187,50 @@ const (
 type OriginGroupSelectionCriteria string
 
 const (
-	OriginGroupSelectionCriteria_default             OriginGroupSelectionCriteria = "default"
+	OriginGroupSelectionCriteria_default OriginGroupSelectionCriteria = "default"
 	OriginGroupSelectionCriteria_media_quality_based OriginGroupSelectionCriteria = "media-quality-based"
 )
 
 type OriginProtocolPolicy string
 
 const (
-	OriginProtocolPolicy_http_only    OriginProtocolPolicy = "http-only"
-	OriginProtocolPolicy_https_only   OriginProtocolPolicy = "https-only"
+	OriginProtocolPolicy_http_only OriginProtocolPolicy = "http-only"
+	OriginProtocolPolicy_https_only OriginProtocolPolicy = "https-only"
 	OriginProtocolPolicy_match_viewer OriginProtocolPolicy = "match-viewer"
 )
 
 type OriginRequestPolicyCookieBehavior string
 
 const (
-	OriginRequestPolicyCookieBehavior_all       OriginRequestPolicyCookieBehavior = "all"
+	OriginRequestPolicyCookieBehavior_all OriginRequestPolicyCookieBehavior = "all"
 	OriginRequestPolicyCookieBehavior_allExcept OriginRequestPolicyCookieBehavior = "allExcept"
-	OriginRequestPolicyCookieBehavior_none      OriginRequestPolicyCookieBehavior = "none"
+	OriginRequestPolicyCookieBehavior_none OriginRequestPolicyCookieBehavior = "none"
 	OriginRequestPolicyCookieBehavior_whitelist OriginRequestPolicyCookieBehavior = "whitelist"
 )
 
 type OriginRequestPolicyHeaderBehavior string
 
 const (
-	OriginRequestPolicyHeaderBehavior_allExcept                       OriginRequestPolicyHeaderBehavior = "allExcept"
-	OriginRequestPolicyHeaderBehavior_allViewer                       OriginRequestPolicyHeaderBehavior = "allViewer"
+	OriginRequestPolicyHeaderBehavior_allExcept OriginRequestPolicyHeaderBehavior = "allExcept"
+	OriginRequestPolicyHeaderBehavior_allViewer OriginRequestPolicyHeaderBehavior = "allViewer"
 	OriginRequestPolicyHeaderBehavior_allViewerAndWhitelistCloudFront OriginRequestPolicyHeaderBehavior = "allViewerAndWhitelistCloudFront"
-	OriginRequestPolicyHeaderBehavior_none                            OriginRequestPolicyHeaderBehavior = "none"
-	OriginRequestPolicyHeaderBehavior_whitelist                       OriginRequestPolicyHeaderBehavior = "whitelist"
+	OriginRequestPolicyHeaderBehavior_none OriginRequestPolicyHeaderBehavior = "none"
+	OriginRequestPolicyHeaderBehavior_whitelist OriginRequestPolicyHeaderBehavior = "whitelist"
 )
 
 type OriginRequestPolicyQueryStringBehavior string
 
 const (
-	OriginRequestPolicyQueryStringBehavior_all       OriginRequestPolicyQueryStringBehavior = "all"
+	OriginRequestPolicyQueryStringBehavior_all OriginRequestPolicyQueryStringBehavior = "all"
 	OriginRequestPolicyQueryStringBehavior_allExcept OriginRequestPolicyQueryStringBehavior = "allExcept"
-	OriginRequestPolicyQueryStringBehavior_none      OriginRequestPolicyQueryStringBehavior = "none"
+	OriginRequestPolicyQueryStringBehavior_none OriginRequestPolicyQueryStringBehavior = "none"
 	OriginRequestPolicyQueryStringBehavior_whitelist OriginRequestPolicyQueryStringBehavior = "whitelist"
 )
 
 type OriginRequestPolicyType string
 
 const (
-	OriginRequestPolicyType_custom  OriginRequestPolicyType = "custom"
+	OriginRequestPolicyType_custom OriginRequestPolicyType = "custom"
 	OriginRequestPolicyType_managed OriginRequestPolicyType = "managed"
 )
 
@@ -246,47 +246,47 @@ type RealtimeMetricsSubscriptionStatus string
 
 const (
 	RealtimeMetricsSubscriptionStatus_Disabled RealtimeMetricsSubscriptionStatus = "Disabled"
-	RealtimeMetricsSubscriptionStatus_Enabled  RealtimeMetricsSubscriptionStatus = "Enabled"
+	RealtimeMetricsSubscriptionStatus_Enabled RealtimeMetricsSubscriptionStatus = "Enabled"
 )
 
 type ReferrerPolicyList string
 
 const (
-	ReferrerPolicyList_no_referrer                     ReferrerPolicyList = "no-referrer"
-	ReferrerPolicyList_no_referrer_when_downgrade      ReferrerPolicyList = "no-referrer-when-downgrade"
-	ReferrerPolicyList_origin                          ReferrerPolicyList = "origin"
-	ReferrerPolicyList_origin_when_cross_origin        ReferrerPolicyList = "origin-when-cross-origin"
-	ReferrerPolicyList_same_origin                     ReferrerPolicyList = "same-origin"
-	ReferrerPolicyList_strict_origin                   ReferrerPolicyList = "strict-origin"
+	ReferrerPolicyList_no_referrer ReferrerPolicyList = "no-referrer"
+	ReferrerPolicyList_no_referrer_when_downgrade ReferrerPolicyList = "no-referrer-when-downgrade"
+	ReferrerPolicyList_origin ReferrerPolicyList = "origin"
+	ReferrerPolicyList_origin_when_cross_origin ReferrerPolicyList = "origin-when-cross-origin"
+	ReferrerPolicyList_same_origin ReferrerPolicyList = "same-origin"
+	ReferrerPolicyList_strict_origin ReferrerPolicyList = "strict-origin"
 	ReferrerPolicyList_strict_origin_when_cross_origin ReferrerPolicyList = "strict-origin-when-cross-origin"
-	ReferrerPolicyList_unsafe_url                      ReferrerPolicyList = "unsafe-url"
+	ReferrerPolicyList_unsafe_url ReferrerPolicyList = "unsafe-url"
 )
 
 type ResponseHeadersPolicyAccessControlAllowMethodsValues string
 
 const (
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_ALL     ResponseHeadersPolicyAccessControlAllowMethodsValues = "ALL"
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_DELETE  ResponseHeadersPolicyAccessControlAllowMethodsValues = "DELETE"
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_GET     ResponseHeadersPolicyAccessControlAllowMethodsValues = "GET"
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_HEAD    ResponseHeadersPolicyAccessControlAllowMethodsValues = "HEAD"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_ALL ResponseHeadersPolicyAccessControlAllowMethodsValues = "ALL"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_DELETE ResponseHeadersPolicyAccessControlAllowMethodsValues = "DELETE"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_GET ResponseHeadersPolicyAccessControlAllowMethodsValues = "GET"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_HEAD ResponseHeadersPolicyAccessControlAllowMethodsValues = "HEAD"
 	ResponseHeadersPolicyAccessControlAllowMethodsValues_OPTIONS ResponseHeadersPolicyAccessControlAllowMethodsValues = "OPTIONS"
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_PATCH   ResponseHeadersPolicyAccessControlAllowMethodsValues = "PATCH"
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_POST    ResponseHeadersPolicyAccessControlAllowMethodsValues = "POST"
-	ResponseHeadersPolicyAccessControlAllowMethodsValues_PUT     ResponseHeadersPolicyAccessControlAllowMethodsValues = "PUT"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_PATCH ResponseHeadersPolicyAccessControlAllowMethodsValues = "PATCH"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_POST ResponseHeadersPolicyAccessControlAllowMethodsValues = "POST"
+	ResponseHeadersPolicyAccessControlAllowMethodsValues_PUT ResponseHeadersPolicyAccessControlAllowMethodsValues = "PUT"
 )
 
 type ResponseHeadersPolicyType string
 
 const (
-	ResponseHeadersPolicyType_custom  ResponseHeadersPolicyType = "custom"
+	ResponseHeadersPolicyType_custom ResponseHeadersPolicyType = "custom"
 	ResponseHeadersPolicyType_managed ResponseHeadersPolicyType = "managed"
 )
 
 type SSLProtocol string
 
 const (
-	SSLProtocol_SSLv3   SSLProtocol = "SSLv3"
-	SSLProtocol_TLSv1   SSLProtocol = "TLSv1"
+	SSLProtocol_SSLv3 SSLProtocol = "SSLv3"
+	SSLProtocol_TLSv1 SSLProtocol = "TLSv1"
 	SSLProtocol_TLSv1_1 SSLProtocol = "TLSv1.1"
 	SSLProtocol_TLSv1_2 SSLProtocol = "TLSv1.2"
 )
@@ -294,15 +294,15 @@ const (
 type SSLSupportMethod string
 
 const (
-	SSLSupportMethod_sni_only  SSLSupportMethod = "sni-only"
+	SSLSupportMethod_sni_only SSLSupportMethod = "sni-only"
 	SSLSupportMethod_static_ip SSLSupportMethod = "static-ip"
-	SSLSupportMethod_vip       SSLSupportMethod = "vip"
+	SSLSupportMethod_vip SSLSupportMethod = "vip"
 )
 
 type ViewerProtocolPolicy string
 
 const (
-	ViewerProtocolPolicy_allow_all         ViewerProtocolPolicy = "allow-all"
-	ViewerProtocolPolicy_https_only        ViewerProtocolPolicy = "https-only"
+	ViewerProtocolPolicy_allow_all ViewerProtocolPolicy = "allow-all"
+	ViewerProtocolPolicy_https_only ViewerProtocolPolicy = "https-only"
 	ViewerProtocolPolicy_redirect_to_https ViewerProtocolPolicy = "redirect-to-https"
 )

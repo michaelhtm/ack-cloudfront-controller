@@ -25,9 +25,9 @@ import (
 // A CloudFront origin access control, including its unique identifier.
 type OriginAccessControlSpec struct {
 
-	// Contains the origin access control.
-	// +kubebuilder:validation:Required
-	OriginAccessControlConfig *OriginAccessControlConfig `json:"originAccessControlConfig"`
+// Contains the origin access control.
+// +kubebuilder:validation:Required
+OriginAccessControlConfig *OriginAccessControlConfig `json:"originAccessControlConfig"`
 }
 
 // OriginAccessControlStatus defines the observed state of OriginAccessControl
@@ -58,8 +58,8 @@ type OriginAccessControlStatus struct {
 type OriginAccessControl struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              OriginAccessControlSpec   `json:"spec,omitempty"`
-	Status            OriginAccessControlStatus `json:"status,omitempty"`
+	Spec   OriginAccessControlSpec   `json:"spec,omitempty"`
+	Status OriginAccessControlStatus `json:"status,omitempty"`
 }
 
 // OriginAccessControlList contains a list of OriginAccessControl
@@ -67,7 +67,7 @@ type OriginAccessControl struct {
 type OriginAccessControlList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []OriginAccessControl `json:"items"`
+	Items []OriginAccessControl `json:"items"`
 }
 
 func init() {

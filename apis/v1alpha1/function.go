@@ -23,18 +23,18 @@ import (
 // FunctionSpec defines the desired state of Function.
 type FunctionSpec struct {
 
-	// The function code. For more information about writing a CloudFront function,
-	// see Writing function code for CloudFront Functions (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/writing-function-code.html)
-	// in the Amazon CloudFront Developer Guide.
-	// +kubebuilder:validation:Required
-	FunctionCode []byte `json:"functionCode"`
-	// Configuration information about the function, including an optional comment
-	// and the function's runtime.
-	// +kubebuilder:validation:Required
-	FunctionConfig *FunctionConfig `json:"functionConfig"`
-	// A name to identify the function.
-	// +kubebuilder:validation:Required
-	Name *string `json:"name"`
+// The function code. For more information about writing a CloudFront function,
+// see Writing function code for CloudFront Functions (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/writing-function-code.html)
+// in the Amazon CloudFront Developer Guide.
+// +kubebuilder:validation:Required
+FunctionCode []byte `json:"functionCode"`
+// Configuration information about the function, including an optional comment
+// and the function's runtime.
+// +kubebuilder:validation:Required
+FunctionConfig *FunctionConfig `json:"functionConfig"`
+// A name to identify the function.
+// +kubebuilder:validation:Required
+Name *string `json:"name"`
 }
 
 // FunctionStatus defines the observed state of Function
@@ -57,7 +57,7 @@ type FunctionStatus struct {
 	// +kubebuilder:validation:Optional
 	FunctionSummary *FunctionSummary `json:"functionSummary,omitempty"`
 	// The URL of the CloudFront function. Use the URL to manage the function with
-	// the CloudFront API.
+// the CloudFront API.
 	// +kubebuilder:validation:Optional
 	Location *string `json:"location,omitempty"`
 }
@@ -68,8 +68,8 @@ type FunctionStatus struct {
 type Function struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              FunctionSpec   `json:"spec,omitempty"`
-	Status            FunctionStatus `json:"status,omitempty"`
+	Spec   FunctionSpec   `json:"spec,omitempty"`
+	Status FunctionStatus `json:"status,omitempty"`
 }
 
 // FunctionList contains a list of Function
@@ -77,7 +77,7 @@ type Function struct {
 type FunctionList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []Function `json:"items"`
+	Items []Function `json:"items"`
 }
 
 func init() {

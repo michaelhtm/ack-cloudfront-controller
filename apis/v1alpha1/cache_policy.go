@@ -23,17 +23,17 @@ import (
 // CachePolicySpec defines the desired state of CachePolicy.
 //
 // A cache policy.
-//
+// 
 // When it's attached to a cache behavior, the cache policy determines the following:
-//
-//   - The values that CloudFront includes in the cache key. These values can
-//     include HTTP headers, cookies, and URL query strings. CloudFront uses
-//     the cache key to find an object in its cache that it can return to the
-//     viewer.
-//
-//   - The default, minimum, and maximum time to live (TTL) values that you
-//     want objects to stay in the CloudFront cache.
-//
+// 
+//    * The values that CloudFront includes in the cache key. These values can
+//    include HTTP headers, cookies, and URL query strings. CloudFront uses
+//    the cache key to find an object in its cache that it can return to the
+//    viewer.
+// 
+//    * The default, minimum, and maximum time to live (TTL) values that you
+//    want objects to stay in the CloudFront cache.
+// 
 // The headers, cookies, and query strings that are included in the cache key
 // are also included in requests that CloudFront sends to the origin. CloudFront
 // sends a request when it can't find a valid object in its cache that matches
@@ -41,9 +41,9 @@ import (
 // include them in the cache key, use OriginRequestPolicy.
 type CachePolicySpec struct {
 
-	// A cache policy configuration.
-	// +kubebuilder:validation:Required
-	CachePolicyConfig *CachePolicyConfig `json:"cachePolicyConfig"`
+// A cache policy configuration.
+// +kubebuilder:validation:Required
+CachePolicyConfig *CachePolicyConfig `json:"cachePolicyConfig"`
 }
 
 // CachePolicyStatus defines the observed state of CachePolicy
@@ -76,8 +76,8 @@ type CachePolicyStatus struct {
 type CachePolicy struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
-	Spec              CachePolicySpec   `json:"spec,omitempty"`
-	Status            CachePolicyStatus `json:"status,omitempty"`
+	Spec   CachePolicySpec   `json:"spec,omitempty"`
+	Status CachePolicyStatus `json:"status,omitempty"`
 }
 
 // CachePolicyList contains a list of CachePolicy
@@ -85,7 +85,7 @@ type CachePolicy struct {
 type CachePolicyList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []CachePolicy `json:"items"`
+	Items []CachePolicy `json:"items"`
 }
 
 func init() {
